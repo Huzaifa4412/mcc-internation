@@ -57,14 +57,14 @@ export const HeroHeader = () => {
               "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
           )}
         >
-          <div className="relative flex items-center flex-wrap justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="relative flex items-center flex-wrap justify-between gap-6  lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Image src="/images/logo1.svg" className="w-[250px] h-[70px]" alt="logo" width={300} height={100} />
+                <Image src="/images/logo1.svg" className="w-[250px] h-[50px]" alt="logo" width={200} height={50} />
               </Link>
 
               <button
@@ -111,7 +111,7 @@ export const HeroHeader = () => {
                           {/* Desktop Dropdown */}
                           <div
                             className={cn(
-                              "absolute top-full divide-y bg-background/50 max-w-4xl  backdrop-blur-lg  left-0  w-[220px] rounded-md border  shadow-lg transition-all duration-200 ease-in-out origin-top",
+                              "absolute top-full divide-y bg-background max-w-4xl  backdrop-blur-lg  left-0  w-[220px] rounded-md border  shadow-lg transition-all duration-200 ease-in-out origin-top",
                               isOpen
                                 ? "opacity-100 scale-100 translate-y-0"
                                 : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -175,13 +175,13 @@ export const HeroHeader = () => {
                             {/* Mobile Dropdown */}
                             <div
                               className={cn(
-                                "overflow-hidden transition-all duration-300 ease-in-out",
+                                "overflow-hidden  transition-all duration-300 ease-in-out",
                                 isOpen
                                   ? "max-h-96 opacity-100 mt-3"
                                   : "max-h-0 opacity-0"
                               )}
                             >
-                              <div className="ml-4 space-y-3">
+                              <div className="ml-4 divide-y space-y-3">
                                 {item.subItems?.map((subItem, subIndex) => (
                                   <Link
                                     key={subIndex}
